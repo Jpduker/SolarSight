@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SolarSight/static/css/main.2b24bd03.css",
+    "main.js": "/SolarSight/static/js/main.1bbd9640.js",
+    "static/media/bacckground.jpg": "/SolarSight/static/media/bacckground.e1f90c8b322a7ad8ddcd.jpg",
+    "static/media/solar2.jpg": "/SolarSight/static/media/solar2.d5d99855518f5d053f50.jpg",
+    "index.html": "/SolarSight/index.html",
+    "main.2b24bd03.css.map": "/SolarSight/static/css/main.2b24bd03.css.map",
+    "main.1bbd9640.js.map": "/SolarSight/static/js/main.1bbd9640.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b24bd03.css",
+    "static/js/main.1bbd9640.js"
+  ]
+}
