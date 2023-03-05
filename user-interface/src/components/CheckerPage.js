@@ -212,7 +212,11 @@ class CheckerPage extends Component {
                 
     } 
                     <div class="progress">
+<<<<<<< HEAD
   <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.confidence}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+=======
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.predicted_eclipse}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+>>>>>>> ee990fd (updated api)
 </div>
                 </p>
 

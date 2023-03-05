@@ -128,10 +128,17 @@ async def create_upload_file(file: UploadFile):
 async def twilio(predicted_eclipse: str , confidence: str ,mobile : str): 
     print(predicted_eclipse , confidence, mobile) 
 <<<<<<< HEAD
+<<<<<<< HEAD
     account_sid = "AC206559fde6304309e3c82935789d051b"
     print(account_sid)
 =======
 >>>>>>> e17edf2 (updated twilio service)
+=======
+=======
+    account_sid = "AC206559fde6304309e3c82935789d051b"
+    print(account_sid)
+>>>>>>> 87f89bf (integrated with frontend)
+>>>>>>> ee990fd (updated api)
 
     ACCOUNT_SID = os.environ.get("ACCOUNT_SID")
 
@@ -140,10 +147,17 @@ async def twilio(predicted_eclipse: str , confidence: str ,mobile : str):
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
 <<<<<<< HEAD
+<<<<<<< HEAD
     body= "The Predicted art is from the culture of "+predicted_eclipse,
 =======
     body= "The Predicted eclipse is"+predicted_eclipse,
 >>>>>>> e17edf2 (updated twilio service)
+=======
+    body= "The Predicted eclipse is"+predicted_eclipse,
+=======
+    body= "The Predicted art is from the culture of "+predicted_eclipse,
+>>>>>>> 87f89bf (integrated with frontend)
+>>>>>>> ee990fd (updated api)
     from_= "+19403146763",
     to= '+91' +mobile
     )
