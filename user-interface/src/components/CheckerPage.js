@@ -99,16 +99,9 @@ class CheckerPage extends Component {
         }
 
     render() { 
-        const myStyle={
-            backgroundImage: `url(${background})`,
-            height:'100vh',
-            marginTop:'-70px',
-            fontSize:'50px',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-        };
+
         return (
-            <div >
+            <div style={{bacckgroundImage:`url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVD_pa0kjEL4Hlpv7__bxrOIXwnKt539UkueVRWdiZo4Kt8O7iaH6qesBK0-TEbgvXFdo&usqp=CAU)`}}>
 
                     {/* <!-- Modal --> */}
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -142,7 +135,7 @@ class CheckerPage extends Component {
 
 
            <div className={classes.box}>
-                <h1 style={{'textAlign':'center'}}className={classes.title}>SolarSight</h1>
+                <h1 style={{'textAlign':'center','color':'white'}}className={classes.title}>SolarSight</h1>
                 
                         <br /> 
                 <form 
