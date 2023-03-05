@@ -205,18 +205,18 @@ class CheckerPage extends Component {
                
                {this.state.visible ? (
 <>
-                <h1><b>Results:</b></h1>
+                <h1 style={{'color':'white'}}><b>Results:</b></h1>
                 <p className={classes.resPhrase}>
                 <h3>This eclipse belongs to : <bold>{this.state.predicted_eclipse}</bold></h3> 
                 <h3>Confidence <bold>{this.state.confidence}</bold></h3>
                 
     } 
                     <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.predicted_eclipse}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.confidence}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
                 </p>
 
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Enter your mobile number to get more information</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style={{'color':'white'}}>Enter your mobile number to get more information</h1>
                 <form onSubmit={this.twilio}>
       <input 
         type="number" 
