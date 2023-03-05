@@ -9,7 +9,10 @@ from torchvision.models import resnet50
 from torch import nn 
 import requests 
 from twilio.rest import Client
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 app = FastAPI() 
 
@@ -112,21 +115,35 @@ async def create_upload_file(file: UploadFile):
     predicted_eclipse = prediction[0][0] 
     confidence = prediction[0][1]
     return {
+<<<<<<< HEAD
         "predicted_eclipse      ": predicted_eclipse, 
+=======
+        "predicted_eclipse": predicted_eclipse, 
+>>>>>>> e17edf2 (updated twilio service)
         "confidence": confidence
     }
+
 
 @app.post("/twilio")
 async def twilio(predicted_eclipse: str , confidence: str ,mobile : str): 
     print(predicted_eclipse , confidence, mobile) 
+<<<<<<< HEAD
     account_sid = "AC206559fde6304309e3c82935789d051b"
     print(account_sid)
+=======
+>>>>>>> e17edf2 (updated twilio service)
 
-    auth_token = "946c78b049b516dcc684cb24c6f08355"
+    ACCOUNT_SID = os.environ.get("ACCOUNT_SID")
 
-    client = Client(account_sid, auth_token)
+    AUTH_TOKEN = os.environ.get("AUTH_TOKEN")
+
+    client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
+<<<<<<< HEAD
     body= "The Predicted art is from the culture of "+predicted_eclipse,
+=======
+    body= "The Predicted eclipse is"+predicted_eclipse,
+>>>>>>> e17edf2 (updated twilio service)
     from_= "+19403146763",
     to= '+91' +mobile
     )
