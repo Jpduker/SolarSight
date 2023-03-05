@@ -1,6 +1,7 @@
 import classes from './styles/Checkerpage.module.css';
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import background from "/home/jayaprakash/hackathons/SolarSight/user-interface/src/components/assets/bacckground.jpg"
 
 class CheckerPage extends Component {
     constructor(props) { 
@@ -98,8 +99,16 @@ class CheckerPage extends Component {
         }
 
     render() { 
+        const myStyle={
+            backgroundImage: `url(${background})`,
+            height:'100vh',
+            marginTop:'-70px',
+            fontSize:'50px',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        };
         return (
-            <div>
+            <div >
 
                     {/* <!-- Modal --> */}
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -133,7 +142,7 @@ class CheckerPage extends Component {
 
 
            <div className={classes.box}>
-                <h1 style={{'textAlign':'center'}}className={classes.title}>AutoScope</h1>
+                <h1 style={{'textAlign':'center'}}className={classes.title}>SolarSight</h1>
                 
                         <br /> 
                 <form 

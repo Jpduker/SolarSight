@@ -1,6 +1,6 @@
 import classes from './styles/Navbar.module.css';
 import { Link } from 'react-router-dom';
-import logo from './assets/logo/demystify.png';
+import logo from '/home/jayaprakash/hackathons/SolarSight/user-interface/src/components/assets/logo/solar2.jpg';
 
 const Navbar = () => {
     const navOptions = [
@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className={classes.navbar}>
             <div className={classes.logo}>
                 <Link to='/'>
-                    <img src={logo} style={{'height':'100%' , 'width' :'100%'}} alt="logo" className={classes.logoImg} />
+                    <img src={logo} style={{'height':'50px' , 'width' :'50px'}} alt="logo" className={classes.logoImg} />
                 </Link>
             </div>
             <div className={classes.options}>
