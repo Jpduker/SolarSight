@@ -112,7 +112,7 @@ async def create_upload_file(file: UploadFile):
     predicted_eclipse = prediction[0][0] 
     confidence = prediction[0][1]
     return {
-        "predicted_eclipse": predicted_eclipse, 
+        "predicted_eclipse      ": predicted_eclipse, 
         "confidence": confidence
     }
 
