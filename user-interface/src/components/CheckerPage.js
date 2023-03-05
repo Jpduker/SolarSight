@@ -10,9 +10,9 @@ class CheckerPage extends Component {
           url : "" , 
           docfile : "" ,
           visible : false ,
-          defect : "" ,
+          predicted_eclipse : "" ,
           docfileUrl  : "", 
-          nondefect : "",
+          confidence : "",
           number: ''
         }
       }
@@ -29,7 +29,7 @@ class CheckerPage extends Component {
     formData.append('file', this.state.docfile , this.state.docfile.name); 
     await axios({ 
       method: 'post', 
-      url  : "http://0.0.0.0:8000/uploadfile/", 
+      url  : "http://127.0.0.1:8000/uploadfile/", 
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -39,8 +39,8 @@ class CheckerPage extends Component {
         console.log(res);
         this.setState({
           visible: true,
-          defect: res.data['defect'],
-          nondefect: res.data['non-defect'],
+          predicted_eclipse: res.data['predicted_eclipse'],
+          confidence: res.data['confidence'],
         });
     
       })
@@ -58,7 +58,7 @@ class CheckerPage extends Component {
       e.preventDefault();
       await axios({ 
       method: 'post', 
-      url  : "http://0.0.0.0:8000/url/?url=" + this.state.url, 
+      url  : "http://127.0.0.1:8000/url/?url=" + this.state.url, 
       headers: {
         'Content-Type': 'application/json',
       },
@@ -67,8 +67,8 @@ class CheckerPage extends Component {
         console.log(res);
         this.setState({
           visible: true,
-          defect: res.data['defect'],
-          nondefect: res.data['non-defect'],
+          predicted_eclipse: res.data['predicted_eclipse'],
+          confidence: res.data['confidence'],
         });
       })
       .catch(error => {
@@ -83,7 +83,7 @@ class CheckerPage extends Component {
         e.preventDefault();
         await axios({ 
         method: 'post', 
-        url  : `http://0.0.0.0:8000/twilio/?defect=${this.state.defect}&nondefect=${this.state.nondefect}&mobile=${this.state.number}`, 
+        url  : `http://127.0.0.1:8000/twilio/?predicted_eclipse=${this.state.predicted_eclipse}&confidence=${this.state.confidence}&mobile=${this.state.number}`, 
         headers: {
           'Content-Type': 'application/json',
         },
@@ -207,25 +207,12 @@ class CheckerPage extends Component {
 <>
                 <h1><b>Results:</b></h1>
                 <p className={classes.resPhrase}>
-                    {this.state.defect > this.state.nondefect ? (
-                        <h3>Identification is <bold>defect</bold></h3> 
-                     ) : (
-                        <h3>Identification is <bold>nondefect</bold></h3>
-
-                     )
+                <h3>This eclipse belongs to : <bold>{this.state.predicted_eclipse}</bold></h3> 
+                <h3>Confidence <bold>{this.state.confidence}</bold></h3>
+                
     } 
-
-                    non-defect
-
                     <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style={{"width" : `${this.state.nondefect}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-
-                    <br     />
-                    defect
-
-                    <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.defect}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{"width" : `${this.state.predicted_eclipse}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
                 </p>
 
