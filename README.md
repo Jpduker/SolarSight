@@ -6,11 +6,11 @@ Solar Sight is inspired by the wonder and fascination that solar eclipses inspir
 
 ## What it does
 
-Solar Sight is a web-based platform that enables users to explore and learn about different types of solar eclipses, including total, partial, and annular eclipses. The platform provides users with detailed information about each type of eclipse, including its causes, characteristics, and viewing tips. The system is built using modern web technologies, including ReactJS for the frontend which is deployed in GitHub pages and FastAPI for the backend which is deployed in GCP, making it easy for users to access and interact with the platform from anywhere in the world.
+Solar Sight is a web-based platform that enables users to explore and learn about different types of solar eclipses, including total, partial, and annular eclipses. The platform provides users with detailed information about each type of eclipse, including its causes, characteristics, and viewing tips. The system is built using modern web technologies, including ReactJS for the frontend which is deployed in GitHub pages and FastAPI for the backend which is deployed in GCP, making it easy for users to access and interact with the platform from anywhere in the world. And twilio service is provided to give view tips to the user regarding the eclipse.
 
 ## How we built it
 
-The Solar Sight platform was built using a combination of modern web technologies and cloud-based infrastructure. We collected data and images of different types of solar eclipses from various sources, including NASA and other scientific institutions, and used this data to build our web application. We utilised ReactJS to create a user-friendly and responsive frontend, while the backend was built using FastAPI to provide scalability, reliability, and security. We also integrated GitHub for version control and continuous deployment, ensuring that any changes to the frontend are automatically deployed to the live website.
+The Solar Sight platform was built using a combination of modern web technologies and cloud-based infrastructure. We collected data and images of different types of solar eclipses from various sources, including NASA and other scientific institutions, and used this data to build our web application. We utilised ReactJS to create a user-friendly and responsive frontend, while the backend was built using FastAPI to provide scalability, reliability,security and also connected twilio to the backend for providing the tips according to the predictions made by the model. We also integrated GitHub for version control and continuous deployment, ensuring that any changes to the frontend are automatically deployed to the live website.
 
 ## Challenges we ran into
 
