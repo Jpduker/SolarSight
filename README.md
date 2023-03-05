@@ -1,6 +1,6 @@
 # SolarSight
 
-##Youtube Link 
+## Youtube Link 
 https://youtu.be/dUpxwIx_zeg
 
 ## Inspiration
