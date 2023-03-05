@@ -28,3 +28,6 @@ Building Solar Sight has taught us several important lessons about the potential
 ## What's next for Solar Sight
 
 Future work for Solar Sight can include expanding the platform to cover other astronomical events, such as lunar eclipses and meteor showers. Additionally, incorporating interactive visualisations and animations can make the platform even more engaging and informative. Finally, leveraging social media and other marketing channels can help raise awareness about the platform and its importance in promoting environmental awareness and scientific literacy.
+
+## Youtube Link
+https://youtu.be/dUpxwIx_zeg
